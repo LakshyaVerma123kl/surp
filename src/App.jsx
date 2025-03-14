@@ -6,16 +6,16 @@ import "./styles.css";
 
 const pages = [
   [
-    { title: "A Cozy Hug for You", link: "/hug.html" },
-    { title: "A Little Surprise", link: "/surprise.html" },
+    { title: "A Cozy Hug for You", link: "/surp/hug.html" },
+    { title: "A Little Surprise", link: "/surp/surprise.html" },
   ],
   [
-    { title: "A Warm Message", link: "/message.html" },
-    { title: "A Sweet Memory", link: "/memory.html" },
+    { title: "A Warm Message", link: "/surp/message.html" },
+    { title: "A Sweet Memory", link: "/surp/memory.html" },
   ],
   [
-    { title: "A Gentle Whisper", link: "/whisper.html" },
-    { title: "A Secret Gift", link: "/gift.html" },
+    { title: "A Gentle Whisper", link: "/surp/whisper.html" },
+    { title: "A Secret Gift", link: "/surp/gift.html" },
   ],
 ];
 
