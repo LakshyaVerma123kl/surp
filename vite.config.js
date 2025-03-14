@@ -4,4 +4,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/surp/", // 👈 This must match your GitHub repo name
 });
