@@ -1,0 +1,218 @@
+/* 🌸 App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe4e1, #ffb6c1, #ff69b4, #ff1493);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ✨ Smooth Background Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🌸 Falling Flower Effect */
+.flower-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.flower {
+  position: absolute;
+  top: -10vh;
+  opacity: 0.8;
+  font-size: 22px;
+  animation: fall linear infinite;
+  transform-origin: center;
+}
+
+/* ✨ Smooth & Randomized Falling Effect */
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) translateX(5vw) rotate(15deg);
+  }
+  100% {
+    transform: translateY(110vh) translateX(-5vw) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+/* 🎵 Music Button */
+.music-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+  background: #ffd1dc;
+  transform: scale(1.1);
+}
+
+.icon {
+  color: #ff1493;
+  font-size: 26px;
+}
+
+/* 🃏 Cards Container */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* 🎀 Individual Card */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  width: 280px;
+  max-width: 90%;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+/* Floating Effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* 📝 Card Title */
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff1493;
+  margin-bottom: 18px;
+}
+
+/* 🎁 Card Buttons */
+.card-btn {
+  display: block;
+  margin-top: 15px;
+  padding: 14px 22px;
+  background: #ff1493;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s;
+  font-weight: bold;
+}
+
+.card-btn:hover {
+  background: #ff007f;
+  transform: scale(1.07);
+}
+
+/* 📦 Button Container (for Next and Restart buttons) */
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add space between buttons */
+  margin-top: 50px;
+}
+
+/* 🎯 Next Button */
+.next-btn {
+  margin-top: 30px;
+  padding: 18px 30px;
+  background: #ff1493;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.next-btn:hover {
+  background: #ff007f;
+  transform: scale(1.12);
+}
+
+/* 🔄 Reset Button */
+.reset-btn {
+  margin-top: 30px;
+  padding: 18px 30px;
+  background: #ff1493;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.reset-btn:hover {
+  background: #ff007f;
+  transform: scale(1.12);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .music-btn {
+    top: 15px;
+    right: 15px;
+    padding: 12px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .next-btn,
+  .reset-btn {
+    font-size: 20px;
+    padding: 16px 28px;
+  }
+}
