@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://yourusername.github.io/yourrepo",
+  "homepage": "https://LakshyaVerma123kl.github.io/surp",
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
     "framer-motion": "^12.5.0",
